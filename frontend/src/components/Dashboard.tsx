@@ -79,7 +79,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <Box sx={{ padding: 3 }}>
-      <Typography variant="h5" gutterBottom>Dashboard - Agregar un Nuevo Ítem</Typography>
+      <Typography variant="h5" gutterBottom>Agregar un nuevo producto para el supermercado</Typography>
 
       {error && (
         <Typography variant="body2" color="error" sx={{ mb: 2 }}>
@@ -90,7 +90,7 @@ const Dashboard: React.FC = () => {
       <Box component="form" onSubmit={handleSubmit} sx={{ mb: 3 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <Tooltip title="Introduce el nombre del ítem" arrow placement="top">
+            <Tooltip title="Introduce el nombre del producto" arrow placement="top">
               <TextField
                 label="Nombre"
                 variant="outlined"
@@ -102,7 +102,7 @@ const Dashboard: React.FC = () => {
             </Tooltip>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Tooltip title="Introduce la marca del ítem" arrow placement="top">
+            <Tooltip title="Introduce la marca del producto" arrow placement="top">
               <TextField
                 label="Marca"
                 variant="outlined"
@@ -114,7 +114,7 @@ const Dashboard: React.FC = () => {
             </Tooltip>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Tooltip title="Introduce el tipo del ítem" arrow placement="top">
+            <Tooltip title="Introduce el tipo del producto" arrow placement="top">
               <TextField
                 label="Tipo"
                 variant="outlined"
@@ -126,7 +126,7 @@ const Dashboard: React.FC = () => {
             </Tooltip>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Tooltip title="Introduce el precio del ítem" arrow placement="top">
+            <Tooltip title="Introduce el precio del producto" arrow placement="top">
               <TextField
                 label="Precio"
                 variant="outlined"
@@ -139,7 +139,7 @@ const Dashboard: React.FC = () => {
             </Tooltip>
           </Grid>
         </Grid>
-        <Tooltip title="Haz clic para insertar un nuevo ítem" arrow placement="top">
+        <Tooltip title="Haz clic para insertar un nuevo producto" arrow placement="top">
           <Button
             type="submit"
             variant="contained"

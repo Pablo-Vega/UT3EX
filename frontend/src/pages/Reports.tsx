@@ -42,7 +42,7 @@ const Reports: React.FC = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:3030/getItems");
+      const response = await fetch("http://localhost:3030/getUsers");
       const data = await response.json();
 
       if (response.ok) {
@@ -63,7 +63,7 @@ const Reports: React.FC = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:3030/getUsers"); 
+      const response = await fetch("http://localhost:3030/getItems"); 
       const data = await response.json();
 
       if (response.ok) {
@@ -91,7 +91,6 @@ const Reports: React.FC = () => {
           Aquí puedes generar informes detallados de la colección y de los usuarios. Haz clic en los botones de abajo para generar los informes.
         </Typography>
 
-        {/* Botones para generar informes */}
         {!loading && (
           <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, mt: 3 }}>
             <Tooltip title="Haz clic para generar el informe de la colección" arrow placement="top">
@@ -110,7 +109,7 @@ const Reports: React.FC = () => {
                   },
                 }}
               >
-                GENERAR INFORME COLECCIÓN
+                GENERAR INFORME USUARIOS
               </Button>
             </Tooltip>
 
@@ -130,7 +129,7 @@ const Reports: React.FC = () => {
                   },
                 }}
               >
-                GENERAR INFORME USUARIOS
+                GENERAR INFORME COLECCION
               </Button>
             </Tooltip>
           </Box>
@@ -151,7 +150,7 @@ const Reports: React.FC = () => {
         {isCollectionReportVisible && !loading && (
           <Paper sx={{ mt: 4, padding: 3, boxShadow: 3 }}>
             <Typography variant="h6" color="primary" gutterBottom>
-              Informe de la Colección
+              Informe de Usuarios
             </Typography>
             <InformeColeccion data={data} />
           </Paper>
@@ -160,7 +159,7 @@ const Reports: React.FC = () => {
         {isUserReportVisible && !loading && (
           <Paper sx={{ mt: 4, padding: 3, boxShadow: 3 }}>
             <Typography variant="h6" color="secondary" gutterBottom>
-              Informe de Usuarios
+              Informe de la Coleccion
             </Typography>
             <InformeUsuarios data={userData} /> 
           </Paper>

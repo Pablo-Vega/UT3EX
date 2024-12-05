@@ -105,7 +105,6 @@ const ManageUsers: React.FC = () => {
             </Typography>
           )}
 
-          {/* Formulario */}
           <Box component="form" onSubmit={handleSubmit} sx={{ mb: 3, backgroundColor: '#fff', padding: 3, borderRadius: 2, boxShadow: 2 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>

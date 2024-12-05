@@ -20,7 +20,7 @@ const InformeColeccion: React.FC<{ data: IProducto[] }> = ({ data }) => {
   return (
     <div style={{ maxWidth: "100%", marginTop: "20px" }}>
       <MaterialTable
-        title="Informe de la Colección de Productos"
+        title="Informe de colección productos"
         columns={columns}
         data={data}
         options={{
